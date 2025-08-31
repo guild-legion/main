@@ -1,0 +1,174 @@
+@font-face {
+ font-family: "Derby";
+ src: url("fonts/Derby-Regular.woff") format("woff");
+}
+
+* {
+ box-sizing: border-box;
+}
+
+html, body {
+ background: linear-gradient(to right, #8c3310 3%,#752201 59%,#752201 75%,#bf6e4e 100%);
+ font-family: "Derby";
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ flex-wrap: wrap;
+    min-height: 100vh;
+    flex: 1;
+    
+}
+
+header {
+ width: 100%;
+ border: 4px solid gold;
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+.logo {
+ display: block;
+ max-width: 100%;
+ height: auto;
+ margin: 20px auto;
+}
+
+nav {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+ margin-bottom: 20px;
+ border: 3px groove gold;
+ 
+}
+
+nav a {
+ color: white;
+ padding: 10px 15px;
+ text-decoration: none;
+}
+
+aside {
+ width: 20%;
+ margin-right: 20px;
+    flex: 0 0 auto;
+}
+
+aside ul {
+ list-style: none;
+ padding: 0;
+}
+
+aside li {
+ border: 4px groove gold;
+ padding: 2px;
+ margin-bottom: 10px;
+}
+
+aside li:hover {
+ background-color: #006400;
+}
+
+aside a {
+    color: white;
+}
+
+main {
+ width: 70%;
+    flex: 1;
+    min-height: 0;
+    
+}
+
+.MainText {
+ text-align: center;
+ font-size: 16px;
+ line-height: 1.6;
+ padding: 20px;
+}
+
+footer {
+    background-image: url(img/Img-Footer.svg);
+    background-repeat: no-repeat;
+    background-size: contain; /* Масштабируем изображение, сохраняя пропорции */
+    background-position: center center; /* Изображение расположено по центру */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    flex: 0 0 auto;
+    flex-grow: 1;
+    max-width: 100%;
+    max-height: 200px;
+    height: auto; /* Высота автоматически подстраивается под изображение */
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+
+/*.footer-image {
+    flex-grow: 1;
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    
+    display: block;
+    margin: 0 auto;
+    
+    }*/
+
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+ .wrapper {
+ flex-direction: column;
+ }
+ 
+ aside, main {
+ width: 100%;
+ }
+ 
+ nav {
+ flex-direction: column;
+ }
+ 
+ nav a {
+ width: 100%;
+ text-align: center;
+ }
+
+ .footer-image {
+        max-width: 100%; 
+    }
+}
+
+/* Дополнительные улучшения */
+a:hover {
+ background-color: rgba(255, 255, 255, 0.1);
+ transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+ .MainText {
+ font-size: 14px;
+ }
+ 
+ nav a {
+ padding: 15px 0;
+ }
+}
